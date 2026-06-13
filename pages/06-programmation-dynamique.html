@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapitre 6 | Programmation Dynamique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Raleway:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/slide-deck.css">
+</head>
+<body>
+  <div class="top-links"><a href="../index.html">Accueil</a><a href="../tsp-world-pro.html">Application</a></div>
+  <main class="deck-shell"><div id="slideRoot"></div></main>
+  <footer class="deck-footer">
+    <button id="prevSlide" class="nav-btn" type="button">← Précédent</button>
+    <div class="progress-wrap"><div id="slideLabel" class="progress-label">Slide 1 / 1</div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div></div>
+    <button id="nextSlide" class="nav-btn next" type="button">Suivant →</button>
+  </footer>
+  <script id="deck-data" type="application/json">{"title": "Programmation\n*Dynamique*", "subtitle": "Principe de Bellman et algorithme de Held-Karp.", "pageTitle": "Chapitre 6 | Programmation Dynamique", "kicker": "Projet de fin d'études", "slides": [{"kicker": "Chapitre 6", "leftTitle": "Programmation\n*Dynamique*", "leftSubtitle": "Décomposer, mémoriser, reconstruire.", "title": "Idée clé", "text": "La programmation dynamique résout un problème en combinant des sous-problèmes plus simples et en mémorisant leurs résultats pour éviter les répétitions."}, {"kicker": "Bellman", "leftTitle": "Principe\n*D'Optimalité*", "leftSubtitle": "Une solution optimale contient des sous-solutions optimales.", "title": "Principe de Bellman", "text": "Si une tournée optimale passe par un état intermédiaire, alors le chemin partiel menant à cet état doit lui aussi être optimal pour ce sous-problème."}, {"kicker": "État", "leftTitle": "Table\n*Dynamique*", "leftSubtitle": "Mémoriser les meilleurs chemins partiels.", "title": "État Held-Karp", "formula": "DP[S][j] = coût minimal pour partir de 0, visiter S, et terminer en j"}, {"kicker": "Transition", "leftTitle": "Construire\n*La Solution*", "leftSubtitle": "Ajouter progressivement les villes.", "title": "Récurrence", "formula": "DP[S][j] = minᵢ∈S, i≠j DP[S\\{j}][i] + d(i,j)"}, {"kicker": "Complexité", "leftTitle": "Gain Sur\n*La Force Brute*", "leftSubtitle": "Toujours exponentiel, mais mieux organisé.", "title": "Held-Karp", "text": "L'algorithme réduit fortement l'énumération naïve, avec une complexité O(n² · 2ⁿ) au lieu de O(n!).", "chips": ["Temps : O(n²·2ⁿ)", "Mémoire : O(n·2ⁿ)"]}]}</script>
+  <script src="../assets/slide-deck.js"></script>
+</body>
+</html>
